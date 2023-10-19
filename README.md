@@ -31,4 +31,7 @@ Here is a link to the words.txt file, which is used to choose the word for the r
 
 ![image](https://github.com/TomaNeshkov/HangmanByToma/assets/126071897/78fce1ef-7106-497f-9273-badd3d1c6d2d) - Loss screen
 
+
+Also, here is a link to my Replit account, where the game is posted: https://replit.com/@TomaNeshkov
+
 I hope you enjoy! :)
