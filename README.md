@@ -21,4 +21,5 @@ Here is a link straight to the source code: https://github.com/TomaNeshkov/Hangm
 
 Here is a link to the words.txt file, which is used to choose the word for the round: https://github.com/TomaNeshkov/HangmanByToma/blob/main/HangmanByToma/HangmanByToma/words.txt
 
-### Screenshots:
+# <span style="font-size:32px;">Screenshots:</span>
+
