@@ -34,4 +34,7 @@ Here is a link to the words.txt file, which is used to choose the word for the r
 
 # Live Demo:
 
-[Start Live Demo](https://gist.github.com/TomaNeshkov/495b38d3ab43ecec2d0a17c16fc998a2.js)
+# Live Demo:
+
+[Start Live Demo](https://gist.github.com/TomaNeshkov/495b38d3ab43ecec2d0a17c16fc998a2)
+
