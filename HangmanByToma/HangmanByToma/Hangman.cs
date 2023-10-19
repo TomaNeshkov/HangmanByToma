@@ -55,7 +55,6 @@ class Program
         Console.Clear();
         Console.WriteLine(wrongGuessesFrames[incorrectGuess]);
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.Write("Guess: ");
         Console.ForegroundColor = ConsoleColor.White;
         Console.Write($"{guess}");
