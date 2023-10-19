@@ -7,4 +7,4 @@ This is my c# recreation of the hame "Hangman"
 
 # Input:
 * You have to input a letter from <kbd>A</kbd> to <kbd>Z</kbd>.
-* Then, you press <kbd>Enter<kbd>.
+* Then, you press <kbd>Enter</kbd>.
