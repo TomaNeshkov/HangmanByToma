@@ -26,7 +26,8 @@ Here is a link to the words.txt file, which is used to choose the word for the r
 
 ![image](https://github.com/TomaNeshkov/HangmanByToma/assets/126071897/6bb35115-c612-4d43-a709-b5df103cb35a)
 
-![image](https://github.com/TomaNeshkov/HangmanByToma/assets/126071897/a1a421d8-6ce9-413f-a2c3-39fb1e7b26f5) - Win screen
+![image](https://github.com/TomaNeshkov/HangmanByToma/assets/126071897/89b9fe1c-09ab-4cdf-bb5c-6037b42d0760)
+ - Win screen
 
 ![image](https://github.com/TomaNeshkov/HangmanByToma/assets/126071897/78fce1ef-7106-497f-9273-badd3d1c6d2d) - Loss screen
 
