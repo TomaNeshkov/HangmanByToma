@@ -4,6 +4,36 @@ class Program
     static string Underscore = "_";
     const int MaxAllowedIncorrectGuesses = 6;
 
+    const string WinScreenText2 = @"
+     
+    ┌───────────────────────────┐
+    │                           │
+    │  WW       WW ** NN   N    │
+    │  WW       WW ii NNN  N    │
+    │   WW  WW WW  ii N NN N    │
+    │    WWWWWWW   ii N  NNN    │
+    │     WW  W    ii N   NN    │
+    │                           │
+    │        Good job!          │
+    │  You guessed the word!    │
+    └───────────────────────────┘
+";
+
+    const string LossScreenText2 = @"
+    ┌────────────────────────────────────┐
+    │  LLL          OOOO    SSSS   SSSS  │
+    │  LLL         OO  OO  SS  SS SS  SS │
+    │  LLL        OO    OO SS     SS     │
+    │  LLL        OO    OO  SSSS   SSSS  │
+    │  LLL        OO    OO     SS     SS │
+    │  LLLLLLLLLL  OO  OO  SS  SS SS  SS │
+    │   LLLLLLLLL   OOOO    SSSS   SSSS  │
+    │                                    │ 
+    │        You were so close.          │
+    │ Next time you will guess the word! │
+    └────────────────────────────────────┘
+";
+
     static void Main()
     {
         Console.CursorVisible = false;
@@ -54,26 +84,19 @@ class Program
     {
         Console.Clear();
         Console.WriteLine(wrongGuessesFrames[incorrectGuess]);
-        Console.ForegroundColor = ConsoleColor.Green;
         Console.Write("Guess: ");
-        Console.ForegroundColor = ConsoleColor.White;
         Console.Write($"{guess}");
 
         int wordLength = guessedWord.Length;
 
-        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine($"\nYou have to guess {wordLength} symbols.");
         Console.WriteLine($"The following letters are used: {string.Join(", ", playerUsedLetters)}");
-        Console.ForegroundColor = ConsoleColor.White;
 
         if (inputIsInvalid)
         {
             Console.WriteLine("You should type only a single character!");
         }
-
-        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write("Your symbol: ");
-        Console.ForegroundColor = ConsoleColor.White;
     }
 
     static void PlayGame(string word, string wordToGuess, int incorrectGuessCount, List<char> playerUsedLetters, string guess)
@@ -168,37 +191,6 @@ class Program
     {
         return incorrectGuessCount == MaxAllowedIncorrectGuesses;
     }
-
-
-    static string WinScreenText2 = @"
-     
-┌───────────────────────────┐
-│                           │
-│  WW       WW ** NN   N    │
-│  WW       WW ii NNN  N    │
-│   WW  WW WW  ii N NN N    │
-│    WWWWWWW   ii N  NNN    │
-│     WW  W    ii N   NN    │
-│                           │
-│        Good job!          │
-│  You guessed the word!    │
-└───────────────────────────┘
-";
-
-    static string LossScreenText2 = @"
-    ┌────────────────────────────────────┐
-    │  LLL          OOOO    SSSS   SSSS  │
-    │  LLL         OO  OO  SS  SS SS  SS │
-    │  LLL        OO    OO SS     SS     │
-    │  LLL        OO    OO  SSSS   SSSS  │
-    │  LLL        OO    OO     SS     SS │
-    │  LLLLLLLLLL  OO  OO  SS  SS SS  SS │
-    │   LLLLLLLLL   OOOO    SSSS   SSSS  │
-    │                                    │ 
-    │        You were so close.          │
-    │ Next time you will guess the word! │
-    └────────────────────────────────────┘
-";
 
     static string[] deathAnimationFrames = new string[]
     {
@@ -487,7 +479,7 @@ class Program
                 @"      O   ║ " + '\n' +
                 @"          ║ " + '\n' +
                 @"          ║ " + '\n' +
-                @"        _ ║ " + '\n' +
+                @"      _   ║ " + '\n' +
                 @" __/══════╩═══"
     };
 
@@ -553,10 +545,10 @@ class Program
     static void DrawDeathAnimation(string[] deathAnimation)
     {
         Console.SetCursorPosition(0, 0);
-        foreach (string frame in deathAnimation)
+        for (int i = 0; i < deathAnimation.Length; i++)
         {
             Console.Clear();
-            Console.WriteLine(frame);
+            Console.WriteLine(deathAnimation[i]);
             Thread.Sleep(200);
             Console.SetCursorPosition(0, 0);
         }
